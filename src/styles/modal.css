@@ -1,0 +1,167 @@
+.modal__controller {
+    height: min-content;
+    width: fit-content;
+    padding: 2rem 1.5rem;
+    position: relative;
+    margin: auto;
+    border: none;
+    border-radius: var(--radius-1);
+    animation: modalAnimation 0.5s
+}
+.modal__controller::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    gap: 1.75rem;
+}
+.modal__container > p {
+    color: var(--color-grey-2);
+    font-size: var(--font-size-3);
+    font-weight: var(--font-weight-3);
+}
+
+.modal__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.modal__header > h4 {
+    color: var(--color-grey-1);
+    font-size: var(--font-size-2);
+    font-weight: var(--font-weight-1);
+}
+
+.modal__close {
+    padding: 0.4rem 0.85rem;
+    background-color: var(--color-grey-5);
+    color: var(--color-grey-2);
+    font-size: var(--font-size-2);
+    font-family: var(--font-family-2);
+    font-weight: var(--font-weight-1);
+    border: none;
+    border-radius: var(--radius-2);
+}
+.modal__close:hover {
+    background-color: var(--color-grey-4);
+    color: var(--color-grey-1);
+    cursor: pointer;
+}
+#cancel__button:hover {
+    background-color: var(--color-grey-4);
+    color: var(--color-grey-1);
+    cursor: pointer;
+}
+
+#insert__container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+}
+#insert__container > label {
+    color: var(--color-grey-1);
+    font-size: var(--font-size-3);
+    font-weight: var(--font-weight-2);
+}
+#insert__container > input {
+    border: 1.5px solid var(--color-grey-3);
+    border-radius: var(--radius-1);
+    background-color: var(--fixed-white);
+    color: var(--color-grey-2);
+    padding: 0.5rem;
+}
+#insert__container > input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#tag__container {
+    width: max-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+#tag__container > h4 {
+    color: var(--color-grey-1);
+    font-size: var(--font-size-3);
+    font-weight: var(--font-weight-2);
+}
+#tag__container > button {
+    background-color: var(--fixed-white);
+    color: var(--color-grey-2);
+    font-size: var(--font-size-3);
+    font-weight: var(--font-weight-1);
+    border: 1.5px solid var(--color-grey-5);
+    border-radius: var(--radius-1);
+    padding: 0.5rem 1rem;
+}
+#tag__container > button:hover {
+    border: 1.5px solid var(--color-brand-1);
+    color: var(--color-brand-1);
+    cursor: pointer;
+}
+
+#end__container {
+    display: flex;
+    align-self: flex-end;
+    gap: 1rem;
+}
+#cancel__button {
+    padding: 0.4rem 0.85rem;
+    background-color: var(--color-grey-5);
+    color: var(--color-grey-2);
+    font-size: var(--font-size-2);
+    font-weight: var(--font-weight-1);
+    border: none;
+    border-radius: var(--radius-1);
+}
+#insert__button {
+    background-color: var(--color-brand-1);
+    color: var(--fixed-white);
+    border: 1.5px solid var(--color-brand-1);
+    border-radius: var(--radius-1);
+    font-size: var(--font-size-3);
+    font-weight: var(--font-weight-1);
+    padding: 0.5rem 1rem;
+}
+#insert__button:hover {
+    background-color: var(--color-brand-2);
+    border: 1.5px solid var(--color-brand-2);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 722px) {
+    #tag__container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    #tag__container > button {
+        width: 100%;
+    }
+    #end__container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    #cancel__button, #insert__button {
+        width: 100%;
+    }
+}
+
+@keyframes modalAnimation {
+    0% {transform: translateY(-200%)};
+    33% {transform: translateY(-100%)};
+    66% {transform: translateY(-50%)};
+    100% {transform: translateY(0%)};
+}

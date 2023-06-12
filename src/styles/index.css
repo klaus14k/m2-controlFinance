@@ -1,1 +1,186 @@
-/* Desenvolva a estilização da sua página aqui */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 20%;
+
+    background-color: var(--color-grey-5);
+}
+header > h1 {
+    color: var(--color-grey-1);
+    font-size: var(--font-size-1);
+    font-weight: var(--font-weight-1);
+}
+header > h1 > span {
+    color: var(--color-brand-1);
+}
+header > button {
+    background-color: var(--color-brand-1);
+    color: var(--fixed-white);
+    border: 1.5px solid var(--color-brand-1);
+    border-radius: var(--radius-1);
+    font-size: var(--font-size-3);
+    font-weight: var(--font-weight-1);
+    padding: 0.5rem 1rem;
+}
+header > button:hover {
+    background-color: var(--color-brand-2);
+    border: 1.5px solid var(--color-brand-2);
+    cursor: pointer;
+}
+#app {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 20%;
+    gap: 3rem;
+}
+.main__Content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.25rem;
+}
+#container__top > h2 {
+    color: var(--color-grey-1);
+    font-size: var(--font-size-2);
+    font-weight: var(--font-weight-2);
+}
+#container__top > div {
+    display: flex;
+    gap: 0.75rem;
+}
+#container__top > div > button {
+    background-color: var(--fixed-white);
+    color: var(--color-grey-2);
+    font-size: var(--font-size-3);
+    font-weight: var(--font-weight-1);
+    border: 1.5px solid var(--color-grey-5);
+    border-radius: var(--radius-1);
+    padding: 0.5rem 1rem;
+}
+#container__top > div > button:hover {
+    border: 1.5px solid var(--color-brand-1);
+    /* background-color: var(--color-brand-3); */
+    color: var(--color-brand-1);
+    cursor: pointer;
+}
+
+#container__middle {
+    background-color: var(--color-grey-5);
+    border: 1.5px solid var(--color-grey-4);
+    border-radius: var(--radius-1);
+    padding: 1rem;
+    font-size: var(--font-size-3);
+    font-weight: var(--font-weight-2);
+    color: var(--color-grey-1);
+}
+#container__middle > h3 {
+    font-weight: var(--font-weight-2);
+}
+
+.valueCard {
+    background-color: var(--fixed-white);
+    border: 1.5px solid var(--color-grey-5);
+    border-radius: var(--radius-1);
+    padding: 1rem;
+    font-size: var(--font-size-3);
+    font-weight: var(--font-weight-2);
+    color: var(--color-grey-1);
+}
+.valueCard > div {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: space-between;
+    font-size: var(--font-size-4);
+}
+.valueCard > div > span {
+    color: var(--color-grey-2);
+    font-size: var(--font-size-4);
+    background-color: var(--color-grey-5);
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--radius-2);
+}
+.valueCard > div > span:hover {
+    background-color: var(--color-grey-4);
+    color: var(--color-grey-1);
+    cursor: pointer;
+}
+.valueCard > div > img {
+    padding: 0.5rem;
+    border-radius: var(--radius-2);
+    border: 1.5px solid var(--color-grey-5);
+    background-color: var(--fixed-white);
+}
+.valueCard > div > img:hover {
+    cursor: pointer;
+}
+.valueCard:hover {
+    border-color: var(--color-brand-1);
+}
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+ul
+#no-values__container {
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    border: dashed 1.5px var(--color-grey-3);
+    border-radius: var(--radius-1);
+    background-color: var(--color-grey-5);
+    cursor: pointer;
+}
+#no-values__container > h4 {
+    color: var(--color-grey-1);
+    font-size: var(--font-size-2);
+    font-weight: var(--font-weight-1);
+}
+#no-values__container > h5 {
+    color: var(--color-grey-2);
+    font-size: var(--font-size-3);
+    font-weight: var(--font-weight-2);
+}
+
+@media screen and (max-width: 722px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 2rem 15%;
+    }
+    header > button {
+        width: 100%;
+    }
+    #app {
+        padding: 3rem 15%;
+    }
+    #container__top {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #container__top > div {
+        width: 100%;
+    }
+    #container__top > div > button {
+        width: 100%;
+    }
+    #container__middle {
+        width: 100%;
+        padding: 3%;
+    }
+}
+
+.pressed {
+    border: 1.5px solid var(--color-brand-1)!important;
+    background-color: var(--color-brand-3)!important;
+    color: var(--color-brand-1)!important;
+    cursor: pointer;
+}

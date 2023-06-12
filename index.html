@@ -16,11 +16,52 @@
     />
     <link rel="stylesheet" href="./src/styles/globalStyles.css" />
     <link rel="stylesheet" href="./src/styles/index.css" />
+    <link rel="stylesheet" href="./src/styles/modal.css">
+    <script src="./src/scripts/valuesData.js" defer></script>
+    <script src="./src/scripts/index.js" defer></script>
+    <script src="./src/scripts/modal.js" defer></script>
   </head>
   <body>
-    <main id="app"></main>
-    <script src="./src/scripts/modal.js"></script>
-    <script src="./src/scripts/valuesData.js"></script>
-    <script src="./src/scripts/index.js"></script>
+    <header>
+      <h1><span>Control</span> Finance</h1>
+      <button class="addButton">Registrar novo valor</button>
+    </header>
+    <main id="app">
+        <div id="container__top" class="main__Content">
+          <h2>Resumo financeiro</h2>
+          <div>
+            <button class="filterButton" id="noFilter">Todos</button>
+            <button class="filterButton" id="filter0">Entradas</button>
+            <button class="filterButton" id="filter1">Saídas</button>
+          </div>
+        </div>
+        <div id="container__middle" class="main__Content">
+          <h3>Soma dos valores</h3>
+          <p>R$<span id="values__sum"></span></p>
+        </div>
+        <ul></ul>
+        <dialog class="modal__controller">
+          <div class="modal__container">
+            <div class="modal__header">
+              <h4>Registro de valor</h4>
+              <button class="modal__close">X</button>
+            </div>
+            <p>Digite o valor e em seguida aperte no botão referente <wbr>ao tipo do valor</p>
+            <div id="insert__container">
+              <label for="modal__id">Valor</label>
+              <input id="modal__id" type="number" placeholder="R$ 00.00">
+            </div>
+            <div id="tag__container">
+              <h4>Tipo de valor</h4>
+              <button class="tagButton">Entrada</button>
+              <button class="tagButton">Saída</button>
+            </div>
+            <div id="end__container">
+              <button id="cancel__button">Cancelar</button>
+              <button id="insert__button">Inserir Valor</button>
+            </div>
+          </div>
+        </dialog>
+    </main>
   </body>
 </html>

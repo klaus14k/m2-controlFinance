@@ -1,4 +1,4 @@
-const valuesCategory = ["Entrada", "Saída"];
+const valuesCategory = ["Entrada", "Saída"]
 
 let insertedValues = [
   {
@@ -16,4 +16,4 @@ let insertedValues = [
     value: 15.5,
     categoryID: 0,
   },
-];
+]
